@@ -1,0 +1,37 @@
+@import url(https: //fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap);
+@import url(https: //fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet);
+@import url(./desktop.css);
+@import url(./mobile.css);
+
+:root{
+    --main-color:#03F0FF;
+    --sub-color:#1cfe1b;
+    --black-color:#000;
+    --dark-color:#03C3FF;
+    --light-color:#F5F5F5;
+    --white-color:#fff;
+    --main-font:'Roboto Slab',"LXGW WenKai TC",serif;
+    --sub-font:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*{box-sizing: border-box;}
+
+body,h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    color: #000;
+    font-family: var(--main-font);
+    background-color: var(--black-color);   
+}
+/* 
+canvas {
+    width: 100vw;
+    height: 480px;
+    display: block;
+} */
