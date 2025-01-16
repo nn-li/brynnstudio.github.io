@@ -1,4 +1,4 @@
-@media screen and (max-width:727px) {
+@media screen and (max-width:744px)and (min-width:390px) {
 
     /* grid system */
     .wrap {
@@ -59,17 +59,18 @@
         padding-left: 4px;
         list-style: none;
         display: flex;
+        float: right;
     }
 
 
     header ul a {
         color: var(--main-color);
         font-weight: 700;
-        font-size: 20px;
+        font-size: 12px;
         text-align: center;
         line-height: 40px;
         display: block;
-        width: 120px;
+        width: 80px;
         height: 40px;
         border-left: 4px solid var(--whites-color);
         transition: all 0.4s;
@@ -78,6 +79,10 @@
     header h6 {
         transition: all 0.4s;
 
+    }
+    
+    header h2 a{
+        font-size: 12px;
     }
 
     header h2:hover {
@@ -163,7 +168,7 @@
     }
 
     @keyframes move-up-scroll {
-        0% {
+        10% {
             transform: translateY(400px);
             transform: translateX(-400px);
             opacity: 0;
@@ -182,22 +187,24 @@
     main {
         color: var(--main-color);
         width: 100%;
-        font-size: 90px;
+        height: 360px;
+        font-size: 40px;
         display: flex;
         justify-content: space-between;
         /* justify-content: center;
         text-align: center;
         display: flex; */
         overflow: hidden;
-        padding: 92px;
-        background-image: url(./img/p_1.PNG);
+        padding: 20px;
+        /* background-image: url(./img/p_1.PNG); */
         background-position: relative;
         background-repeat: no-repeat;
         background-size: 100%;
+        
     }
 
     main h1 {
-        font-size: 72px;
+        font-size: 48px;
         font-weight: 700;
         color: var(--white-color);
     }
@@ -577,7 +584,7 @@
 
     .jumbtron-top .img {
         width: 80px;
-        height: auto;
+        height: 24px;
         padding-right: 4px;
         height: auto;
         display: block;
@@ -586,7 +593,7 @@
 
     .jumbtron-top img {
         width: 100%;
-        height: auto;
+        height: 24px;
         display: block;
 
     }
@@ -596,7 +603,7 @@
     }
 
     .jumbtron-down .img {
-        width: 80px;
+        width: 100px;
         padding-left: 40%;
         height: auto;
         display: block;

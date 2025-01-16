@@ -1,3 +1,45 @@
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("carousel-item");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+    
+}
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("carousel-item");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1 }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3800); // Change image every 2 seconds
+}
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items: 4,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('canvas');
@@ -49,3 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setup();
     draw();
 });
+let myVideo = document.getElementById("starfish");//定義影片檔
+let playButton = document.getElementById("play-button");//定義播放按鈕
+let pauseButton = document.getElementById("pause-button");//定義暫停按鈕
+
+function playVideo() {
+    myVideo.play();
+    playButton.style.display = "none";
+    pauseButton.style.display = "block";
+}
+
+function pauseVideo() {
+    myVideo.pause();
+    playButton.style.display = "block";
+    pauseButton.style.display = "none";
+}
