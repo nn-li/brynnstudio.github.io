@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="Zh-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <title>brynn.nn.portfolio</title>
+</head>
+<body>
+    <!-- Explanation in JS tab -->
+    <div class="welcomepage  ">
+        <!-- The two texts -->
+        <div class="text">
+            <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>    
+            </div>
+        </div>
+        <div class="btn-center">
+            <a href="./index.html" class="btn">ENTER</a>
+        </div>
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0
+                        0 0 0 1 0
+                        0 0 1 0 30
+                        0 0 120 360 -120" />
+                </filter>
+            </defs>
+        </svg>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="./js/text.js"></script>
+</body>
+</html>
