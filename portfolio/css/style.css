@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap);
+/* @import url(https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet);Textleft */
+@import url(./desktop.css);
+@import url(./mobile.css);
+
+:root{
+    --main-color:#03F0FF;
+    --sub-color:#1cfe1b;
+    --black-color:#000;
+    --dark-color:#03C3FF;
+    --light-color:#F5F5F5;
+    --white-color:#fff;
+    --main-font:'Neue Haas Grotesk Display Pro',"Gen Jyuu Gothic",arial;
+    --sub-font:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+html,body {
+    width: 100%;
+
+}
+/* body,h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+} */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: covers;
+}
+
+h1 {
+    text-align: center;
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+h2 {
+    font-size: 2.5vw;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    color: #000;
+    font-family: var(--main-font);
+    background-color: var(--black-color);   
+}
+/* 
+canvas {
+    width: 100vw;
+    height: 480px;
+    display: block;
+} */
+
+/* .video {
+    width: 100%;
+    width: 20px; height: 40px;
+    position: relative;
+} */
+
+/* btn */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 36px;
+    padding: 4px 46px;
+    /* background-color: #95BABB; */
+    color: #fff;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+/* welcomepage */
+.welcomepage {
+    padding-top: 280px;
+    height: 100vh;
+}
+
+#container {
+    /* Center the text in the viewport. */
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+    filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Gen Jyuu Gothic', arial;
+    font-size: 90pt;
+    text-align: center;
+    user-select: none;
+    padding-bottom: 12px;
+    color: #95bb9e;
+}
+
+
+
+.welcomepage .btn {
+    vertical-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 40px;
+    margin-top: 200px;
+    background-color: #000000;
+    color: var(--sub-color);
+    border: 0.6px solid var(--sub-color);
+    border-radius: 40px;
+
+}
+
+.welcomepage .btn:hover {
+    color: #001eff;
+    background-color: var(--main-color);
+    transition: ease-out 0.5s;
+    border: 2px solid;
+    border-radius: 40px;
+    scale: 1.2s;
+}
+
+.welcomepage .btn::before,
+.welcomepage .btn::after {
+    box-sizing: inherit;
+    position: absolute;
+    content: '';
+    border: 2px solid transparent;
+    border-radius: 40px;
+    width: 0;
+    height: 0;
+
+}
+
+.welcomepage .btn::after {
+    bottom: 0;
+    right: 0;
+}
+
+.welcomepage .btn::before {
+    top: 0;
+    left: 0;
+}
+
+.welcomepage .btn:hover::before,
+.welcomepage .btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.welcomepage .btn:hover::before {
+    border-top-color: #001eff;
+    border-right-color: #001eff;
+    transition: width 0.2s ease-out, height 0.3s ease-out 0.3s;
+    border-radius: 40px;
+}
+
+.welcomepage .btn:hover::after {
+    border-bottom-color: #001eff;
+    border-left-color: #001eff;
+    transition: border-color 0.2s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
+    border-radius: 40px;
+}
